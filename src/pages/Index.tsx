@@ -7,8 +7,8 @@ import {ResultsSection} from "@/components/ResultsSection";
 import {useToast} from "@/hooks/use-toast";
 import logo from "../assets/autism.png";
 
-// const API_URL = import.meta.env.VITE_API_URL; //For Production
-const API_URL = "http://127.0.0.1:8000"; //For Development
+const API_URL = import.meta.env.VITE_API_URL; //For Production
+// const API_URL = "http://127.0.0.1:8000"; //For Development
 
 interface FormData {
     isToddler: boolean;
