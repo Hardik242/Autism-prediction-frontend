@@ -3,36 +3,36 @@ import {Card} from "./ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "./ui/tabs";
 
 const toddlerQuestions = [
-    "Does your child look at you when you call their name?",
-    "How easy is it for you to get eye contact with your child?",
-    "Does your child point to indicate that they want something?",
-    "Does your child point to share interest with you?",
-    "Does your child pretend (e.g., care for dolls, talk on a toy phone)?",
-    "Does your child follow where you're looking?",
-    "If you or someone else in the family is visibly upset, does your child show signs of wanting to comfort them?",
-    "Would you describe your child's first words as typical or unusual?",
-    "Does your child use simple gestures (e.g., wave goodbye)?",
-    "Does your child stare at nothing with no apparent purpose?",
+    "How often does your child look at you when you call his/her name?",
+    "How often does your child make eye contact with you?",
+    "How often does your child point with their finger to ask for something?",
+    "How often does your child point to show you something interesting?",
+    "How often does your child engage in pretend play (e.g., talking on a toy phone, feeding a doll)?",
+    "How often does your child look to see what you are looking at?",
+    "When someone nearby is visibly upset, how often does your child show signs of trying to comfort them?",
+    "How often does your child use sounds or simple words to communicate or get your attention?",
+    "How often does your child use simple gestures, such as waving goodbye or shaking their head?",
+    "How often does your child stare blankly into space for several seconds?",
 ];
 
 const generalQuestions = [
-    "Do you find it easy to understand what others are thinking or feeling by looking at their faces?",
-    "Do you find it difficult to predict what will happen next in social situations?",
-    "Do you find it easy to do more than one thing at once?",
-    "If there is an interruption, can you switch back to what you were doing very quickly?",
-    "Do you find it easy to 'read between the lines' when someone is talking to you?",
-    "Do you know how to tell if someone listening to you is getting bored?",
-    "When you're reading a story, do you find it difficult to work out the characters' intentions?",
-    "Do you like to collect information about categories of things (e.g., types of car, bird, train, plant)?",
-    "Do you find it easy to work out what someone is thinking or feeling just by looking at their face?",
-    "Do you find it difficult to work out people's intentions?",
+    "How often do you notice small sounds that others do not?",
+    "How often do you concentrate on the whole picture instead of the small details?",
+    "How often do you find it easy to do more than one thing at once?",
+    "After an interruption, how often can you quickly switch back to what you were doing?",
+    "How often do you find it easy to understand the hidden meaning or intent ('read between the lines') in a conversation?",
+    "How often do you notice when the person you are talking to is getting bored?",
+    "When reading a story, how often do you find it difficult to understand the characters' intentions?",
+    "How often do you enjoy collecting detailed information about specific categories of things?",
+    "How often do you find it easy to understand someone's thoughts or feelings just by looking at their face?",
+    "How often do you find it difficult to understand other people's intentions?",
 ];
 
 export const QuestionnaireGuide = () => {
     const [activeTab, setActiveTab] = useState("toddler");
 
     return (
-        <section className="space-y-4 animate-fade-in">
+        <section className="space-y-4 animate-fade-in max-w-[95%] md:max-w-[85%] mx-auto">
             <h2 className="text-2xl font-semibold text-foreground">
                 Screening Questions Reference
             </h2>

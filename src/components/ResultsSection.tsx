@@ -17,7 +17,7 @@ export const ResultsSection = ({isLoading, results}: ResultsSectionProps) => {
     if (!isLoading && !results) return null;
 
     return (
-        <section className="space-y-6 animate-fade-in">
+        <section className="space-y-6 animate-fade-in max-w-[95%] md:max-w-[85%] mx-auto">
             <h2 className="text-2xl font-semibold text-foreground">
                 Screening Results
             </h2>

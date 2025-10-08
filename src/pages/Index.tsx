@@ -7,6 +7,9 @@ import {ResultsSection} from "@/components/ResultsSection";
 import {useToast} from "@/hooks/use-toast";
 import logo from "../assets/autism.png";
 
+// const API_URL = import.meta.env.VITE_API_URL; //For Production
+const API_URL = "http://127.0.0.1:8000"; //For Development
+
 interface FormData {
     isToddler: boolean;
     Age: string;
@@ -52,13 +55,20 @@ const Index = () => {
         setIsLoading(true);
         setResults(null);
 
+        const Age = Number(formData.Age);
+
+        const newFormData = {
+            ...formData,
+            Age,
+        };
+
         try {
-            const response = await fetch("http://127.0.0.1:8000/predict/", {
+            const response = await fetch(`${API_URL}/predict`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(newFormData),
             });
 
             if (!response.ok) {
@@ -90,8 +100,7 @@ const Index = () => {
 
     return (
         <div className="min-h-screen bg-background">
-            {/* Header */}
-            <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 backdrop-blur-md supports-[backdrop-filter]:bg-gradient-to-r supports-[backdrop-filter]:from-primary/10 supports-[backdrop-filter]:via-accent/5 supports-[backdrop-filter]:to-primary/10">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
                         <img src={logo} className="w-8 h-8 rounded-lg" />
@@ -101,10 +110,9 @@ const Index = () => {
                     </div>
                     <ThemeToggle />
                 </div>
-            </header>
+            </nav>
 
-            {/* Main Content */}
-            <main className="container py-8 md:py-12 space-y-12">
+            <main className="py-8 md:py-12 space-y-12">
                 <WelcomeSection
                     onReviewQuestions={scrollToQuestions}
                     onStartScreening={scrollToForm}
@@ -123,7 +131,6 @@ const Index = () => {
                 </div>
             </main>
 
-            {/* Footer */}
             <footer className="border-t border-border bg-muted/30 py-6 mt-12">
                 <div className="container text-center text-sm text-muted-foreground">
                     <p>
