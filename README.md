@@ -202,11 +202,7 @@ cd Autism-screening-frontend
                     >
                 </p>
                 Use any one
-                <pre><code>
-                  <span class="highlight-diff-selection">VITE_API_URL= "http://127.0.0.1:8000" // For local development</span>
-                  <span class="highlight-diff-selection">VITE_API_URL= &lt;Your hosted URL&gt; // For production</span>
-                  <br class="ProseMirror-trailingBreak">
-</code></pre>
+                <pre><code><span class="highlight-diff-selection">VITE_API_URL= "http://127.0.0.1:8000" // For local development</span><span class="highlight-diff-selection">VITE_API_URL= &lt;Your hosted URL&gt; // For production</span><br class="ProseMirror-trailingBreak"></code></pre>
             </li>
         </ul>
     </li>
